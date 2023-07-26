@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8ee50bff-b3f6-4820-ba7e-d3c2e0861e4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/BaseballTonight/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/BaseballTonight/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/dao/board/ArticleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/dao/board/ArticleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/service/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseballTonight/src/com/baseballtonight/service/board/BoardService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2T6ZdK8bomiwRYjPOf5dpFojVDD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/untitled"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ee50bff-b3f6-4820-ba7e-d3c2e0861e4f" name="Changes" comment="" />
+      <created>1690365579836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690365579836</updated>
+    </task>
+    <servers />
+  </component>
+</project>
