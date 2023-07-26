@@ -131,19 +131,27 @@ public class ArticleDAO {
 		}
 	} // 조회수 증가 함수
 
-	public void increaseRecommend(int id) {
+	public int increaseRecommend(int id, String mem_id) { // 07/26 시작
 		try {
+			resultSet = dao.select("SELECT * FROM recommend_list WHERE article_id = "+id+" AND member_user_id = '"+mem_id+"';");
+			if(resultSet.isBeforeFirst() == true) return -1; 
+			dao.update("INSERT INTO recommend_list SET article_id = "+id+", member_user_id = '"+mem_id+"';");
 			dao.update("UPDATE article SET recommend = recommend + 1 WHERE id = " + id);
 		} catch(Exception e) {
 		}
-	} // 추천수 증가 함수
+		return 0;
+	} // 추천수 증가 함수   07/26 끝
 
-	public void decreaseRecommend(int id) {
+	public int decreaseRecommend(int id, String mem_id) { // 07/26 시작
 		try {
+			resultSet = dao.select("SELECT * FROM recommend_list WHERE article_id = "+id+" AND member_user_id = '"+mem_id+"';");
+			if(resultSet.isBeforeFirst() == false) return -1;
+			dao.update("DELETE FROM recommend_list WHERE article_id = "+id+" AND member_user_id = '"+mem_id+"';");
 			dao.update("UPDATE article SET recommend = recommend - 1 WHERE id = " + id);
 		} catch(Exception e) {
 		}
-	} // 추천수 감소 함수
+		return 0;
+	} // 추천수 감소 함수   07/26 끝
 
 	public ArrayList<ArticleReply> getArticleReplyList(int articleId) {
 		try {

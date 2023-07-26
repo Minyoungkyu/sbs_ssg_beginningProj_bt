@@ -189,18 +189,28 @@ public class BoardService {
 	
 	}
 	
-	public int doArticleRecommendIncrease(String articleTitle) { // 07/26 void -> int 밑에 return 1
-		parkInfoArticleDao.increaseRecommend(parkInfoArticleDao.getArticle(articleTitle).id);
-		System.out.println("추천완료!");
-		System.out.println();
-		return 1;
+	public void doArticleRecommendIncrease(String articleTitle, String mem_id) { // 07/26 mem_id 들 추가됨 if 문 추가됨
+		int result = parkInfoArticleDao.increaseRecommend(parkInfoArticleDao.getArticle(articleTitle).id, mem_id);
+		
+		if( result == -1 ) {
+			System.out.println("이미 추천 되었습니다.");
+			System.out.println();
+		} else {
+			System.out.println("추천 완료!");
+			System.out.println();
+		}
 	}
 	
-	public int doArticleRecommendDecrease(String articleTitle) { // 07/26 void -> int 밑에 return 0
-		parkInfoArticleDao.decreaseRecommend(parkInfoArticleDao.getArticle(articleTitle).id);
-		System.out.println("추천취소!");
-		System.out.println();
-		return 0;
+	public void doArticleRecommendDecrease(String articleTitle, String mem_id) { // 07/26 mem_id 들 추가됨  if 문 추가됨
+		int result = parkInfoArticleDao.decreaseRecommend(parkInfoArticleDao.getArticle(articleTitle).id, mem_id);
+				
+		if( result == -1 ) {
+			System.out.println("아직 추천하지 않았습니다.");
+			System.out.println();
+		} else {
+			System.out.println("추천 취소!");
+			System.out.println();
+		}
 	}
 
 }

@@ -18,7 +18,7 @@ public class BoardController { // 새로 추가된 Controller class
 	private String mem_id;
 	private String parkName;
 	private BoardService parkInfoArticleService; // service 패키지 ParkInfoArticleSerive 추가.
-	private int recommendStatus; // 07/26 추가됨 
+	
 	
 	
 
@@ -51,7 +51,7 @@ public class BoardController { // 새로 추가된 Controller class
 		this.parkInfoArticleService = new BoardService(parkId, mem_id);
 		this.sc = new Scanner(System.in);
 		
-		recommendStatus = showParkInfoArticleMenu(); // 07/26 recommendStatus = 생김.
+		showParkInfoArticleMenu(); 
 		
 		while1: while (true) {
 
@@ -93,24 +93,12 @@ public class BoardController { // 새로 추가된 Controller class
 							String command2 = UserInput.receiveContainedString(boardCmd2Set);
 							
 							if (command2.equals("rcmd")) {
-								
-								if ( recommendStatus == 1 ) { // 07/26 시작
-									System.out.println("이미 추천 되었습니다.");
-									continue;
-								} 
-								
-								recommendStatus = parkInfoArticleService.doArticleRecommendIncrease(articleTitle);
+								parkInfoArticleService.doArticleRecommendIncrease(articleTitle,mem_id); // 07/26 인자에 mem_id 추가
 								continue;
 								// 07/26 끝.
 								
 							} else if (command2.equals("cancel")) {
-								
-								if ( recommendStatus == 0 ) { // 07/26 시작
-									System.out.println("아직 추천 하지않았습니다.");
-									continue;
-								} 
-								
-								recommendStatus = parkInfoArticleService.doArticleRecommendDecrease(articleTitle);
+								parkInfoArticleService.doArticleRecommendDecrease(articleTitle,mem_id); // 07/26 인자에 mem_id 추가
 								continue;
 								// 07/26 끝.
 								
@@ -123,7 +111,7 @@ public class BoardController { // 새로 추가된 Controller class
 								showParkInfoArticleMenu(); // 요거 추가됨 07/20!!!!!!!!!!!!!!!!!!!!!!!
 								break;
 							} else if (command2.equals("back")) { // command2 5번 추가됨. 07/20
-								recommendStatus = showParkInfoArticleMenu(); // 07/26 recommendStatus = 생김.
+								showParkInfoArticleMenu(); 
 								break;
 							} else if (command2.equals("reply")) { // 6으로 바뀜 07/20!!!!!!!!
 								System.out.println();
